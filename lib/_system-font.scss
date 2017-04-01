@@ -1,0 +1,23 @@
+//
+// Function: System UI Font
+//
+// Generate a font list to use the system's main UI font
+
+@function system-ui-font() {
+  $system-fonts: (
+    apple:     (-apple-system, BlinkMacSystemFont),
+    windows:   'Segoe UI',
+    google:    Roboto,
+    KDE:       Oxygen,
+    ubuntu:    Ubuntu,
+    gnome:     Cantarell,
+    fallback:  ('Open Sans', 'Helvetica Neue', Helvetica, sans-serif),
+  );
+
+  $font-list: ();
+  @each $system, $font in $system-fonts {
+    $font-list: join($font-list, $font, comma);
+  }
+
+  @return $font-list;
+}

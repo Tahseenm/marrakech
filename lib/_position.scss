@@ -1,0 +1,15 @@
+//
+// Position
+//
+// A shorthand way of defining position and its length
+@mixin position($position, $lengths) {
+  @if type-of($lengths) != map {
+    @error 'positions mixin expects a map for lengths. #{$lengths} is a invalid argument.';
+  }
+
+  position: $position;
+  top: map-get($lengths, top);
+  right: map-get($lengths, right);
+  bottom: map-get($lengths, bottom);
+  left: map-get($lengths, left);
+}

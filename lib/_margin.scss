@@ -1,0 +1,14 @@
+//
+// Margin
+//
+// A short hand way of defining margins which ouputs individual margin definitions
+@mixin margin($margins) {
+  @if type-of($margins) != list {
+    @error 'margin mixin expects a list. #{$margins} is a invalid argument.';
+  }
+
+  margin-top: nth($margins, 1);
+  margin-left: nth($margins, 2);
+  margin-bottom: nth($margins, 3);
+  margin-right: nth($margins, 4);
+}

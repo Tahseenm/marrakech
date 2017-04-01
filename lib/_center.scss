@@ -1,0 +1,20 @@
+//
+// Center
+//
+// Center elements vertically and horizontally
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//
+// Center block
+//
+// Center elements horizontally with a display of block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

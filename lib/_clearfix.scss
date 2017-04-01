@@ -1,0 +1,11 @@
+//
+// Clearfix
+//
+// Clearfix hack for modern browsers and IE8 & above
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

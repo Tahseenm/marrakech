@@ -1,0 +1,10 @@
+//
+// Circle
+//
+// Create a circle shape with a given diameter
+@mixin circle($diameter, $color: #000) {
+  height: $diameter;
+  width: $diameter;
+  border-radius: 50%;
+  background-color: $color;
+}

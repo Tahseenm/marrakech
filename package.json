@@ -1,0 +1,38 @@
+{
+  "name": "marrakech",
+  "version": "1.0.0",
+  "description": "A Sass utility library that has the most common helpers and shortcuts",
+  "author": "Tahseen Malik <hello@tahseen.me> (https://tahseenmalik.com)",
+  "main": "lib/marrakech.scss",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "utility",
+    "sass",
+    "helpers",
+    "shortcuts",
+    "styles"
+  ],
+  "scripts": {
+    "lint": "sass-lint --verbose --no-exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tahseenm/marrakeck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tahseenm/marrakech/issues"
+  },
+  "homepage": "https://github.com/Tahseenm/marrakech#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "ghooks": "^2.0.0",
+    "sass-lint": "^1.10.2"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

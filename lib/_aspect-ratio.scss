@@ -1,0 +1,16 @@
+//
+// Aspect Ratio
+//
+// Makes the element adhere to a aspect ratio
+@mixin aspect-ratio($width, $height) {
+  @if type-of($width) != number or type-of($height) != number {
+    @error 'Width and height must be of type number';
+  }
+
+  position: relative;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  padding-bottom: percentage($height / $width);
+}

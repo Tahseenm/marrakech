@@ -1,0 +1,14 @@
+//
+// Padding
+//
+// A short hand way of defining padding which ouputs individual padding definitions
+@mixin padding($paddings) {
+  @if type-of($paddings) != list {
+    @error 'padding mixin expects a list. #{$paddings} is a invalid argument.';
+  }
+
+  padding-top: nth($margins, 1);
+  padding-left: nth($margins, 2);
+  padding-bottom: nth($margins, 3);
+  padding-right: nth($margins, 4);
+}
